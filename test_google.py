@@ -8,5 +8,5 @@ def test_search_positive(config):
 
 def test_search_negative(config):
     browser.element('[name="q"]').should(be.blank).type('1').press_enter()
-    browser.element('[id="search"]').should(have.text('Selen1'))
+    browser.element('[id="search"]').should(have.no.text('Selen1'))
 
